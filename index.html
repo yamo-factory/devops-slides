@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Administration Systemè Worketyamo </title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/white-contrast.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="/assets/root.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+	</style>
+</head>
+
+<body
+	style="background: url('assets/bg-w.webp'); background-repeat: no-repeat; background-size: cover; font-family: 'Open Sans', sans-serif;">
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<img src="assets/logo-linux.png" alt="reveal.js logo"
+					style="height: 300px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+				<h3>Module 1: Administration Système</h3>
+				<p>
+					<small>Créé par <a>Haruna Rashid Yakubu</a> pour <a
+							href="https://worketyamo.itengineeringpro.fr">Worketyamo</a></small>
+				</p>
+			</section>
+
+			<section>
+				<section id="fragments">
+					<h1>Introduction</h1>
+				</section>
+				<section id="fragments" style="text-align: left;">
+					<p class="fragment grow"><span style="background: yellow;">GNU/Linux</span>
+						est un système d’exploitation <span style="background: yellow;">libre</span> fonctionnant sur la
+						base d’un noyau Linux,
+						également appelé <span style="background: yellow;">kernel Linux.</span>
+						Linux est une implémentation libre du système UNIX et respecte les spécifications POSIX.
+						GNU/Linux est généralement distribué dans un ensemble cohérent de logiciels, assemblés autour
+						du noyau Linux et prêt à être installé. Cet ensemble porte le nom de <span
+							style="background: yellow;">“Distribution”</span>
+						<span style="background: yellow;"></span>
+					</p>
+					<aside class="notes">
+						Shhh, these are your private notes 📝
+					</aside>
+				</section>
+
+				<section>
+					<h3>Exemples de Distributions</h3>
+					<ul style="text-align: left;">
+						<li class="fragment fade-left">Debian qui sert de base pour la distribution ubuntu </li>
+						<li class="fragment fade-left">RedHat qui sert de base pour la distribution centOs </li>
+						<li class="fragment fade-left">Arch qui sert de base pour la distribution Manjaro</li>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<section id="fragment">
+					<h1 class="r-fit-text">1.1- Qu’est-ce qu’un <br> système d’exploitation ?</h1>
+				</section>
+				<section id="fragment">
+					<p class="fragment grow">
+						Un système d’exploitation (OS) est un ensemble de programmes permettant la gestion des
+						<span style="background: yellow;">ressources disponibles</span> d’un ordinateur.
+						Parmi cette gestion des ressources, le système d’exploitation est amené à :
+					</p>
+					<aside class="notes">
+						Shhh, these are your private notes 📝
+					</aside>
+				</section>
+				<section id="fragment">
+					<ul style="text-align: left;">
+						<li class="fragment fade-left">Gérer la <span class="line">mémoire</span> physique ou virtuelle.
+						</li>
+						<li class="fragment fade-left">Intercepter les accès aux <span
+								class="line">périphériques.</span></li>
+						<li class="fragment fade-left">Offrir aux applications une gestion correcte des <span
+								class="line">tâches</span></li>
+						<li class="fragment fade-left">Protéger les <span class="line">fichiers</span> contre tout accès
+							non autorisé.</li>
+						<li class="fragment fade-left">Collecter les informations sur les <span
+								class="line">programmes</span> utilisés ou en
+							cours d’utilisation</li>
+					</ul>
+				</section>
+
+				<!-- <section>
+					<h3>Example</h3>
+					<pre><code  class="hljs css" style="font-size: 40px; line-height: 70px;">
+						p {
+							color: "green"
+						  }
+					</code></pre>
+				</section> -->
+			</section>
+			<section>
+				<section>
+					<h1>Différence entre CLI Et GUI</h1>
+				</section>
+				<section>
+					<p>
+						L'interface de ligne de commande (CLI) et l'interface graphique (GUI) sont deux façons
+						différentes d'interagir avec un système d'exploitation.
+					</p>
+				</section>
+				<section style="text-align: left;">
+					<h1>CLI</h1>
+					<p>La CLI est une <span class="line">interface texte </span> qui utilise des commandes et des arguments pour <span class="line">contrôler</span> le système. Les commandes sont généralement courtes et concises, et elles sont entrées en utilisant le clavier.
+					</p>
+					<img src="./assets/cli.png" alt="">
+				</section>
+				<section style="text-align: left;">
+					<h1>GUI</h1>
+					<p>La GUI est une interface graphique qui utilise des menus, des boutons et des autres éléments visuels pour contrôler le système. Les utilisateurs interagissent avec la GUI en utilisant une souris ou un pavé tactile.					</p>
+					<img src="./assets/gui.png" alt="">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h1>Les propriétés CSS</h1>
+				</section>
+				<section style="text-align: left;">
+					<p class="fragment grow">Il existe de nombreuses propriétés CSS qui permettent de
+
+						<span style="background: yellow;">contrôler l'apparence</span> des éléments HTML. Voici
+						quelques-unes des propriétés les plus courantes :
+					</p>
+					<ul>
+						<li class="fragment fade-left">Couleur</li>
+						<li class="fragment fade-left">Texte</li>
+						<li class="fragment fade-left">Police</li>
+						<li class="fragment fade-left">Mise en Forme</li>
+						<li class="fragment fade-left">Mise en Page</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Différences entre CLI et GUI</h3>
+					
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h1>
+						Les valeurs CSS
+					</h1>
+				</section>
+				<section>
+					<p class="fragment grow">Les valeurs CSS peuvent être de différents types, tels que des chaînes de
+						caractères, des nombres, des couleurs ou des listes. </p>
+				</section>
+			</section>
+			<section>
+				<h1></h1>
+			</section>
+			</section>
+
+
+
+
+			<script src="dist/reveal.js"></script>
+			<script src="plugin/zoom/zoom.js"></script>
+			<script src="plugin/notes/notes.js"></script>
+			<script src="plugin/search/search.js"></script>
+			<script src="plugin/markdown/markdown.js"></script>
+			<script src="plugin/highlight/highlight.js"></script>
+			<script>
+
+				// Also available as an ES module, see:
+				// https://revealjs.com/initialization/
+				Reveal.initialize({
+					controls: true,
+					progress: true,
+					center: true,
+					hash: true,
+
+					// Learn about plugins: https://revealjs.com/plugins/
+					plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+				});
+
+			</script>
+
+</body>
+
+</html>
