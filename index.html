@@ -12,7 +12,8 @@
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
-	<link rel="stylesheet" href="dist/theme/white-contrast.css" id="theme">
+	<!-- <link rel="stylesheet" href="dist/theme/white-contrast.css" id="theme"> -->
+	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -23,7 +24,7 @@
 </head>
 
 <body
-	style="background: url('assets/bg-w.webp'); background-repeat: no-repeat; background-size: cover; font-family: 'Open Sans', sans-serif;">
+	style=" font-family: 'Open Sans', sans-serif;">
 
 	<div class="reveal">
 
@@ -84,7 +85,7 @@
 					</aside>
 				</section>
 
-				
+
 				<section id="fragment">
 					<ul style="text-align: left;">
 						<li class="fragment fade-left">Gérer la <span class="line">mémoire</span> physique ou virtuelle.
@@ -122,13 +123,17 @@
 				</section>
 				<section style="text-align: left;">
 					<h1>CLI</h1>
-					<p>La CLI est une <span class="line">interface texte </span> qui utilise des commandes et des arguments pour <span class="line">contrôler</span> le système. Les commandes sont généralement courtes et concises, et elles sont entrées en utilisant le clavier.
+					<p>La CLI est une <span class="line">interface texte </span> qui utilise des commandes et des
+						arguments pour <span class="line">contrôler</span> le système. Les commandes sont généralement
+						courtes et concises, et elles sont entrées en utilisant le clavier.
 					</p>
 					<img src="./assets/cli.png" alt="">
 				</section>
 				<section style="text-align: left;">
 					<h1>GUI</h1>
-					<p>La GUI est une interface graphique qui utilise des menus, des boutons et des autres éléments visuels pour contrôler le système. Les utilisateurs interagissent avec la GUI en utilisant une souris ou un pavé tactile.					</p>
+					<p>La GUI est une interface graphique qui utilise des menus, des boutons et des autres éléments
+						visuels pour contrôler le système. Les utilisateurs interagissent avec la GUI en utilisant une
+						souris ou un pavé tactile. </p>
 					<img src="./assets/gui.png" alt="">
 				</section>
 			</section>
@@ -139,15 +144,20 @@
 				</section>
 				<section id="fragment">
 					<p class="fragment grow">
-						Les hiérarchies du système de fichiers Debian sont un ensemble de règles et de conventions qui définissent l'emplacement des fichiers et des répertoires dans le système de fichiers d'un système Debian.
+						Les hiérarchies du système de fichiers Debian sont un ensemble de règles et de conventions qui
+						définissent l'emplacement des fichiers et des répertoires dans le système de fichiers d'un
+						système Debian.
 					</p>
 					<aside class="notes">
-						Ces règles sont conçues pour faciliter la compréhension et la gestion du système de fichiers, et pour garantir la cohérence entre les différentes distributions Debian.
+						Ces règles sont conçues pour faciliter la compréhension et la gestion du système de fichiers, et
+						pour garantir la cohérence entre les différentes distributions Debian.
 					</aside>
 				</section>
 				<section id="fragment">
 					<p class="fragment grow">
-						Les hiérarchies du système de fichiers Debian sont un ensemble de règles et de conventions qui définissent l'emplacement des fichiers et des répertoires dans le système de fichiers d'un système Debian.
+						Les hiérarchies du système de fichiers Debian sont un ensemble de règles et de conventions qui
+						définissent l'emplacement des fichiers et des répertoires dans le système de fichiers d'un
+						système Debian.
 					</p>
 					<aside class="notes">
 						Shhh, these are your private notes 📝
@@ -155,38 +165,233 @@
 				</section>
 				<section id="fragment">
 					<p class="fragment grow">
-						La hiérarchie des systèmes de fichiers Debian est basée sur le standard , qui est un standard ouvert pour l'organisation des systèmes de fichiers Linux.
+						La hiérarchie des systèmes de fichiers Debian est basée sur le standard , qui est un standard
+						ouvert pour l'organisation des systèmes de fichiers Linux.
 					</p>
 					<aside class="notes">
 						FHS (Filesystem Hierarchy Standard)
 					</aside>
 				</section>
+
 			</section>
+			<section id="fragment">
+				<section id="fragment">
+					<h1 class="r-fit-text">Manipulation de fichiers sous Linux</h1>
+					<img
+						src="https://scdn1.plesk.com/wp-content/uploads/2021/04/05104659/SM_BLOG_Locating-Linux-Files.png">
+				</section>
+				<section id="fragment">
+					<ul>
+						<h1>Sommaire: </h1>
+						<li> Navigation dans les Répertoires</li>
+						<li> Manipulation des Fichiers et Répertoires</li>
+						<li> Affichage et Recherche de Contenu</li>
+						<li> Permissions sur les Fichiers</li>
+						<li> Manipulation Avancée des Fichiers</li>
+						<li> Liens Symboliques (Symlinks) et Liens Durs</li>
+						<li> Commandes Utiles</li>
+					</ul>
+				</section>
+				<section id="fragment">
+					<ul>
+						<h3>3. Affichage et Recherche de Contenu</h3>
+						<li>la commande cat</li>
+						<li>la commande <code>more et less</code></li>
+						<li>La commande <code>head et tail</code></li>
+						<li>La commande grep</li>
+					</ul>
+				</section>
+			</section>
+			<section id="fragment">
+				<section id="fragment">
+					<h2>La commade head et tail</h2>
+					<p>Les commandes head et tail affichent respectivement les premières et dernières lignes d'un
+						fichier.
+					</p>
+				</section>
+				<section id="fragment">
+					<h2>Commande head</h2>
+					<h3>Syntaxe de la commande head </h3>
+					<pre data-id="code-animation"><code class="sh bash">head [OPTIONS] [NOMBRE] FICHIER</code></pre>
+					<h3>
+						Example
+					</h3>
+					<pre data-id="code-animation"><code class="sh bash">
+#Afficher les 10 premières lignes d'un fichier nommé "exemple.txt"
+[test@example ~]$ head exemple.txt
+
+#Afficher les 5 premières lignes d'un fichier nommé "exemple.txt" :
+[test@example ~]$ head -n 5 exemple.txt
+					</code></pre>
+				</section>
+				<section id="fragment">
+					<h2>Commande tail</h2>
+					<h3>Syntaxe de la commande tail </h3>
+					<pre data-id="code-animation"><code class="sh bash">tail [OPTIONS] [NOMBRE] FICHIER</code></pre>
+					<h3>
+						Example
+					</h3>
+					<pre data-id="code-animation"><code class="sh bash">
+#Afficher les 10 dernières lignes d'un fichier nommé "exemple.txt"
+[test@example ~]$ tail exemple.txt
+
+#Afficher les 5 dernières lignes d'un fichier nommé "exemple.txt" :
+[test@example ~]$ tail -n 5 exemple.txt
+					</code></pre>
+				</section>
+			</section>
+			<section id="fragment">
+				<section id="fragment">
+					<h2>La commande grep</h2>
+					<p>La commande grep est un puissant outil de recherche de motifs dans des fichiers ou des flux de
+						texte sous Linux. Elle est utilisée pour filtrer les lignes qui correspondent à un motif
+						spécifique, ce qui en fait un outil essentiel pour l'analyse de fichiers de journal, la
+						recherche de chaînes dans des scripts, et bien plus encore.</p>
+				</section>
+				<section id="fragment">
+					<h2>DEMO</h2>
+					<h3>Syntaxe</h3>
+					<pre data-id="code-animation"><code class="sh bash">grep  [OPTIONS] [MOTIF] fichier</code></pre>
+					<h3>
+						Example
+					</h3>
+					<pre data-id="code-animation"><code class="sh bash">
+#Recherche le texte ou le motif dans le fichier exemple.txt
+[test@example ~]$ grep "motif" exemple.txt
+
+#Recherche le texte ou le motif correspondant dans le fichier exemple.txt de manière recursive
+[test@example ~]$ grep -r "motif" exemple/
+					</code></pre>
+				</section>
+
+
+				<section id="fragment">
+					<section id="fragment">
+						<h4>Options Courantes de la commande grep:</h4>
+						<ul>
+							<li><b>-i :</b> Ignore la casse (recherche insensible à la casse).</li>
+							<li><b>-n :</b> Affiche le numéro de ligne avec le résultat.</li>
+							<li><b>-r ou -R : </b>Recherche récursive dans les répertoires.</li>
+							<li><b>-v :</b> Inverse la correspondance, affiche les lignes qui ne contiennent pas le
+								motif.</li>
+							<li><b>-c :</b> Affiche le nombre total de lignes correspondantes.</li>
+							<li><b>-l :</b> Affiche uniquement les noms de fichiers contenant des correspondances.</li>
+						</ul>
+					</section>
+				</section>
+
+				<section id="fragment">
+					<h1> Utilisation de Caractères Spéciaux, Wilcards</h1>
+				</section>
+				<section id="fragment">
+					<h4>Caractères Wildcard</h4>
+					<ul>
+						<li><b>. :</b>Représente n'importe quel caractère.</li>
+						<li><b>* :</b> Représente zéro ou plusieurs occurrences du caractère précédent.</li>
+					</ul>
+					<h3>Examples</h3>
+					<pre data-id="code-animation"><code class="sh bash">grep  [OPTIONS] [MOTIF] fichier</code></pre>
+					<h3>
+						Example
+					</h3>
+					<pre data-id="code-animation"><code class="sh bash">
+# Recherche "pattern", "patern", "paXXXrn", etc.
+[test@example ~]$ grep "pa.*rn" fichier   
+
+#Recherche le texte ou le motif correspondant dans le fichier exemple.txt de manière recursive
+[test@example ~]$ grep -r "motif" exemple/
+				</code></pre>
+
+				</section>
+
+				<section id="fragment">
+					<h4>Utilisation des Classes de Caractères</h4>
+					<ul>
+						<li><b>[aeiou] :</b>Recherche n'importe quelle voyelle.</li>
+						<li><b>[^0-9] :</b> Recherche un caractère qui n'est pas un chiffre.</li>
+					</ul>
+					<h3>Examples</h3>
+					<pre data-id="code-animation"><code class="sh bash">grep  [OPTIONS] [MOTIF] fichier</code></pre>
+					<h3>
+						Example
+					</h3>
+					<pre data-id="code-animation"><code class="sh bash">
+# Recherche les lignes contenant au moins une voyelle.
+[test@example ~]$ grep "[aeiou]" fichier 
+      
+# Recherche les lignes commençant par un caractère non numérique.
+[test@example ~]$ grep "^[^0-9]" fichier   
+    
+				</code></pre>
+				</section>
+
+				<section id="fragment">
+					<h4>Utilisation des Opérateurs logiques</h4>
+					<ul>
+						<li><b>OR (|) </b></li>
+						<li><b>AND (-e) </b></li>
+						<li><b>NOT (-v) </b></li>
+					</ul>
+				</section>
+
+				<section id="fragment">
+
+					<h3>
+						Example
+					</h3>
+					<pre data-id="code-animation"><code class="sh bash">
+# Cette commande recherche les lignes contenant soit le motif1, soit le motif2.
+[test@example ~]$ grep "motif1\|motif2" fichier.txt 
+   
+# Cette commande recherche les lignes contenant à la fois le motif1 et le motif2.
+[test@example ~]$ grep -e "motif1" -e "motif2" fichier.txt
+   
+# Cette commande affiche les lignes ne contenant pas le motif spécifié.
+[test@example ~]$ grep -v "motif" fichier.txt
+			</code></pre>
+				</section>
+<!--  -->
+				<section id="fragment">
+
+					<h3>
+						
+					</h3>
+					<pre data-id="code-animation"><code class="sh bash">
+# Cette commande recherche les lignes contenant soit le motif1, soit le motif2.
+[test@example ~]$ grep "motif1\|motif2" fichier.txt 
+   
+# Cette commande recherche les lignes contenant à la fois le motif1 et le motif2.
+[test@example ~]$ grep -e "motif1" -e "motif2" fichier.txt
+   
+# Cette commande affiche les lignes ne contenant pas le motif spécifié.
+[test@example ~]$ grep -v "motif" fichier.txt
+			</code></pre>
+				</section>
+				
 
 
 
+				<script src="dist/reveal.js"></script>
+				<script src="plugin/zoom/zoom.js"></script>
+				<script src="plugin/notes/notes.js"></script>
+				<script src="plugin/search/search.js"></script>
+				<script src="plugin/markdown/markdown.js"></script>
+				<script src="plugin/highlight/highlight.js"></script>
+				<script>
 
-			<script src="dist/reveal.js"></script>
-			<script src="plugin/zoom/zoom.js"></script>
-			<script src="plugin/notes/notes.js"></script>
-			<script src="plugin/search/search.js"></script>
-			<script src="plugin/markdown/markdown.js"></script>
-			<script src="plugin/highlight/highlight.js"></script>
-			<script>
+					// Also available as an ES module, see:
+					// https://revealjs.com/initialization/
+					Reveal.initialize({
+						controls: true,
+						progress: true,
+						center: true,
+						hash: true,
 
-				// Also available as an ES module, see:
-				// https://revealjs.com/initialization/
-				Reveal.initialize({
-					controls: true,
-					progress: true,
-					center: true,
-					hash: true,
+						// Learn about plugins: https://revealjs.com/plugins/
+						plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+					});
 
-					// Learn about plugins: https://revealjs.com/plugins/
-					plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
-				});
-
-			</script>
+				</script>
 
 </body>
 
