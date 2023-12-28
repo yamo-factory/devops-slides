@@ -20,11 +20,13 @@
 	<link rel="stylesheet" href="/assets/root.css">
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+		.light  {
+			background-color: darkgray;
+		}
 	</style>
 </head>
 
-<body
-	style=" font-family: 'Open Sans', sans-serif;">
+<body style=" font-family: 'Open Sans', sans-serif;">
 
 	<div class="reveal">
 
@@ -42,18 +44,19 @@
 
 			<section>
 				<section id="fragments">
-					<h1>Introduction</h1>
+					<h3>Introduction</h3>
 				</section>
 				<section id="fragments" style="text-align: left;">
-					<p class="fragment grow"><span style="background: yellow;">GNU/Linux</span>
-						est un système d’exploitation <span style="background: yellow;">libre</span> fonctionnant sur la
+					<p class="fragment grow"><span style="background: darkgray;">GNU/Linux</span>
+						est un système d’exploitation <span style="background: darkgray;">libre</span> fonctionnant sur
+						la
 						base d’un noyau Linux,
-						également appelé <span style="background: yellow;">kernel Linux.</span>
+						également appelé <span style="background: darkgray;">kernel Linux.</span>
 						Linux est une implémentation libre du système UNIX et respecte les spécifications POSIX.
 						GNU/Linux est généralement distribué dans un ensemble cohérent de logiciels, assemblés autour
 						du noyau Linux et prêt à être installé. Cet ensemble porte le nom de <span
-							style="background: yellow;">“Distribution”</span>
-						<span style="background: yellow;"></span>
+							style="background: darkgray;">“Distribution”</span>
+						<span style="background: darkgray;"></span>
 					</p>
 					<aside class="notes">
 						Shhh, these are your private notes 📝
@@ -72,12 +75,12 @@
 
 			<section>
 				<section id="fragment">
-					<h1 class="r-fit-text">1.1- Qu’est-ce qu’un <br> système d’exploitation ?</h1>
+					<h3 class="r-fit-text">1.1- Qu’est-ce qu’un <br> système d’exploitation ?</h3>
 				</section>
 				<section id="fragment">
 					<p class="fragment grow">
 						Un système d’exploitation (OS) est un ensemble de programmes permettant la gestion des
-						<span style="background: yellow;">ressources disponibles</span> d’un ordinateur.
+						<span style="background: darkgray;">ressources disponibles</span> d’un ordinateur.
 						Parmi cette gestion des ressources, le système d’exploitation est amené à :
 					</p>
 					<aside class="notes">
@@ -113,7 +116,7 @@
 			</section>
 			<section>
 				<section>
-					<h1>Différence entre CLI Et GUI</h1>
+					<h3>Différence entre CLI Et GUI</h3>
 				</section>
 				<section>
 					<p>
@@ -122,7 +125,7 @@
 					</p>
 				</section>
 				<section style="text-align: left;">
-					<h1>CLI</h1>
+					<h3>CLI</h3>
 					<p>La CLI est une <span class="line">interface texte </span> qui utilise des commandes et des
 						arguments pour <span class="line">contrôler</span> le système. Les commandes sont généralement
 						courtes et concises, et elles sont entrées en utilisant le clavier.
@@ -130,7 +133,7 @@
 					<img src="./assets/cli.png" alt="">
 				</section>
 				<section style="text-align: left;">
-					<h1>GUI</h1>
+					<h3>GUI</h3>
 					<p>La GUI est une interface graphique qui utilise des menus, des boutons et des autres éléments
 						visuels pour contrôler le système. Les utilisateurs interagissent avec la GUI en utilisant une
 						souris ou un pavé tactile. </p>
@@ -139,7 +142,7 @@
 			</section>
 			<section>
 				<section id="fragment">
-					<h1 class="r-fit-text">Hiérarchies du système <br>de fichiers Debian</h1>
+					<h3 class="r-fit-text">Hiérarchies du système <br>de fichiers Debian</h3>
 					<img src="./assets/fhs.webp">
 				</section>
 				<section id="fragment">
@@ -176,13 +179,13 @@
 			</section>
 			<section id="fragment">
 				<section id="fragment">
-					<h1 class="r-fit-text">Manipulation de fichiers sous Linux</h1>
+					<h3 class="r-fit-text">Manipulation de fichiers sous Linux</h3>
 					<img
 						src="https://scdn1.plesk.com/wp-content/uploads/2021/04/05104659/SM_BLOG_Locating-Linux-Files.png">
 				</section>
 				<section id="fragment">
 					<ul>
-						<h1>Sommaire: </h1>
+						<h3>Sommaire: </h3>
 						<li> Navigation dans les Répertoires</li>
 						<li> Manipulation des Fichiers et Répertoires</li>
 						<li> Affichage et Recherche de Contenu</li>
@@ -281,7 +284,7 @@
 				</section>
 
 				<section id="fragment">
-					<h1> Utilisation de Caractères Spéciaux, Wilcards</h1>
+					<h3> Utilisation de Caractères Spéciaux, Wilcards</h3>
 				</section>
 				<section id="fragment">
 					<h4>Caractères Wildcard</h4>
@@ -350,11 +353,11 @@
 [test@example ~]$ grep -v "motif" fichier.txt
 			</code></pre>
 				</section>
-<!--  -->
+				<!--  -->
 				<section id="fragment">
 
 					<h3>
-						
+
 					</h3>
 					<pre data-id="code-animation"><code class="sh bash">
 # Cette commande recherche les lignes contenant soit le motif1, soit le motif2.
@@ -367,9 +370,155 @@
 [test@example ~]$ grep -v "motif" fichier.txt
 			</code></pre>
 				</section>
-				
+				<!--  -->
+				<section id="fragment">
+					<h3>
+						Les Expressions régulières
+					</h3>
+					<p>
+						Une expression régulière est une chaîne de caractères qui décrit un motif ou un modèle que vous
+						souhaitez rechercher dans un texte.
+					</p>
+				</section>
+
+				<section id="fragment">
+					<h3>
+						tableau des métacaractères les plus courants utilisés dans les expressions régulières
+					</h3>
+				</section>
+				<section>
+					<h3>Métacaractères</h3>
+					<table>
+						<thead>
+							<tr>
+								<th>Métacaractère</th>
+								<th>Signification</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>.</td>
+								<td>n'importe quel caractère</td>
+							</tr>
+							<tr>
+								<td>[]</td>
+								<td>un ensemble de caractères
+								</td>
+							</tr>
+							<tr>
+								<td>*</td>
+								<td>zéro ou plusieurs occurrences du caractère précédent
+								</td>
+							</tr>
+							<tr>
+								<td>+</td>
+								<td>une ou plusieurs occurrences du caractère précédent
+								</td>
+							</tr>
+							<tr>
+								<td>?</td>
+								<td>zéro ou une occurrence du caractère précédent
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
 
 
+				<section id="fragment">
+					<h3>Métacaractères</h3>
+					<table>
+						<thead>
+							<tr>
+								<th>Métacaractère</th>
+								<th>Signification</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>^</td>
+								<td>Correspond au début de la ligne
+								</td>
+							</tr>
+							<tr>
+								<td>$</td>
+								<td>la fin de la ligne
+								</td>
+							</tr>
+							<tr>
+								<td>{n}</td>
+								<td>exactement n occurrences du caractère précédent
+								</td>
+							</tr>
+							<tr>
+								<td>{n,m}</td>
+								<td>au moins n et au maximum m occurrences du caractère précédent
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+			  <section id="fragment">
+                <h2>Demonstration</h2>
+			  </section>
+
+			  <section>
+				<h3>Compression & decompression </h3>
+				<p>
+					La compression et l'archivage sont deux techniques couramment utilisées en informatique pour <span class="light"> réduire la taille </span> des fichiers et des données. La compression consiste à réduire la taille d'un fichier en éliminant les redondances des données. L'archivage consiste à regrouper plusieurs fichiers et/ou dossiers dans un seul fichier.
+				</p>
+			  </section>
+
+			  <section>
+				<h3>
+					Compression
+				</h3>
+				<p>
+					La compression est une technique qui permet de réduire la taille d'un fichier en éliminant les redondances des données. Il existe de nombreux algorithmes de compression différents, chacun avec ses propres avantages et inconvénients.
+				</p>
+				<p>
+					Les algorithmes de compression les plus courants sont les suivants :
+				</p>
+
+			  </section>
+<section>
+	<ul>
+		<li>
+			Gzip : un algorithme de compression sans perte qui utilise la méthode de compression DEFLATE.
+		</li>
+		<li>
+			Bzip2 : un algorithme de compression sans perte qui utilise la méthode de compression Burrows-Wheeler.
+		</li>
+		<li>
+			XZ : un algorithme de compression sans perte qui utilise la méthode de compression LZMA2.
+		</li>
+	</ul>
+</section>
+			  <section>
+				<h3>
+					Archivage
+				</h3>
+				<p>
+					L'archivage consiste à regrouper plusieurs fichiers et/ou dossiers dans un seul fichier. L'archivage est souvent utilisé pour faciliter le transfert de données, la sauvegarde ou la restauration de données.
+				</p>
+				<p>
+					Les formats d'archives les plus courants sont les suivants :
+				</p>
+			  </section>
+			  <section>
+				<ul>
+					<li>
+						Tar : un format d'archive qui ne compresse pas les données par défaut.
+					</li>
+					<li>
+						Gzip : un format d'archive qui utilise l'algorithme de compression gzip.
+					</li>
+					<li>
+						Bzip2 : un format d'archive qui utilise l'algorithme de compression bzip2.
+					</li>
+				</ul>
+			  </section>
 
 				<script src="dist/reveal.js"></script>
 				<script src="plugin/zoom/zoom.js"></script>
